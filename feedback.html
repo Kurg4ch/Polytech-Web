@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="feedback-form-container">
+        <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data" class="feedback-form">
+            <h2>Форма обратной связи</h2>
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required> <br/>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> <br/>
+
+            <label>Откуда узнали о нас:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="source" value="Интернет" required> Интернет</label>
+                <label><input type="radio" name="source" value="Друзья"> Друзья</label>
+                <label><input type="radio" name="source" value="Реклама"> Реклама</label>
+            </div> <br/>
+
+            <label for="type">Тип обращения:</label>
+            <select id="type" name="type" required>
+                <option value="жалоба">Жалоба</option>
+                <option value="предложение">Предложение</option>
+            </select><br/>
+
+            <label for="message">Текст сообщения:</label>
+            <textarea id="message" name="message" rows="5" required></textarea><br/>
+
+            <label for="attachment">Вложения:</label>
+            <input type="file" id="attachment" name="attachment"><br/>
+
+            <label class="checkbox-container">
+                <input type="checkbox" name="consent" required>
+                Даю согласие на обработку персональных данных
+            </label><br/>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
